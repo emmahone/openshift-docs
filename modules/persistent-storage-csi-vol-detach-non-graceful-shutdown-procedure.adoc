@@ -25,6 +25,11 @@ oc get node <node name> <1>
 ----
 <1> <node name> = name of the non-gracefully shutdown node
 
+[IMPORTANT]
+====
+If the node has not been completely shut down, do not proceed and tain the node. Should the node still be up and the taint applied, then filesystem corruption can occur.
+====
+
 . Taint the corresponding node object by running the following command:
 +
 [source, terminal]
